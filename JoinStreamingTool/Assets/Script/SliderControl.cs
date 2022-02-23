@@ -27,12 +27,6 @@ public class SliderControl : MonoBehaviour
         SubtractionTimer();
     }
 
-    // タイマーの最大値設定
-    public void TimerGaugeMaxValueChange(int Value)
-    {
-        SliderObject.maxValue = Value;
-    }
-
     public void TimerActive()
     {
         UpdateActive = true;
@@ -50,6 +44,11 @@ public class SliderControl : MonoBehaviour
         SliderObject.value = SliderObject.maxValue;
         UpdateActive = false;
         TimerFinished = false;
+    }
+
+    public void ChangeValue()
+    {
+        SliderObject.value = SliderObject.maxValue;
     }
 
     // タイマーの数値チェック
