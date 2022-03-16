@@ -3540,7 +3540,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 642968516}
-  - component: {fileID: 642968517}
   m_Layer: 5
   m_Name: section1
   m_TagString: Untagged
@@ -3569,20 +3568,6 @@ RectTransform:
   m_AnchoredPosition: {x: -609, y: -414}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &642968517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642968515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04d82551ea31ea54fa3f78a52b055dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChildSlider: {fileID: 1103267015}
-  NextSlider: {fileID: 460827194}
 --- !u!1 &647336544
 GameObject:
   m_ObjectHideFlags: 0
@@ -7240,7 +7225,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4E0B\u90E8\u306E\u300C\u30B9\u30BF\u30FC\u30C8\u300D\u30DC\u30BF\u30F3\u304B\u3089\u3001\u4E8B\u9805\u304C\u3063\u3081\u3093\u306B\u5165\u308A\u307E\u3059\u3002\n\u5B9F\u884C\u753B\u9762\u3067\u306F\u4EE5\u4E0B\u306E\u64CD\u4F5C\u304C\u53EF\u80FD\u3067\u3059\u3002"
+  m_Text: "\u4E0B\u90E8\u306E\u300C\u30B9\u30BF\u30FC\u30C8\u300D\u30DC\u30BF\u30F3\u304B\u3089\u3001\u5B9F\u884C\u753B\u9762\u306B\u5165\u308A\u307E\u3059\u3002\n\u5B9F\u884C\u753B\u9762\u3067\u306F\u4EE5\u4E0B\u306E\u64CD\u4F5C\u304C\u53EF\u80FD\u3067\u3059\u3002"
 --- !u!222 &1597434995
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9469,7 +9454,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2140117530}
-  - component: {fileID: 2140117531}
   m_Layer: 5
   m_Name: section2
   m_TagString: Untagged
@@ -9498,17 +9482,3 @@ RectTransform:
   m_AnchoredPosition: {x: 10.5, y: -414}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2140117531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140117529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04d82551ea31ea54fa3f78a52b055dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChildSlider: {fileID: 460827194}
-  NextSlider: {fileID: 1983035718}
