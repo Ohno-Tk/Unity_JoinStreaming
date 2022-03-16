@@ -12,19 +12,25 @@ public class SettingsCautionText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(DropdownObject.value == 1)
+
+        switch (DropdownObject.value)
         {
-            TextObject.text = "【  !  】"+InputFieldObject.text;
-        }
-        else
-        {
-            //test
+            case 0:
+                TextObject.text = "【  !  】概要欄を読んでから参加お願いします!";
+            break;
+
+            case 1:
+                TextObject.text = "【  !  】"+InputFieldObject.text;
+            break;
+
+            default:
+                Debug.Log("DropdownObject.valueの値が不正です");
+            break;
         }
     }
 }
