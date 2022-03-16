@@ -9,6 +9,7 @@ public class PlayerInputKey : MonoBehaviour
     public KeyCode SettingKey = KeyCode.Escape;
     public GameObject StartSection;
     public GameObject Setting;
+    public GameObject MainLogic;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class PlayerInputKey : MonoBehaviour
         {
             Debug.Log("設定を立ち上げます");
             Setting.SetActive (true);
+            MainLogic.SetActive (false);
         }
     }
 }
