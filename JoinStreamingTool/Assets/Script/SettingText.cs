@@ -12,10 +12,4 @@ public class SettingText : MonoBehaviour
     {
         this.GetComponent<Text> ().text = SettingInputField.text;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
