@@ -7,8 +7,8 @@ public class SliderControl : MonoBehaviour
 {
     private Slider SliderObject;
     private float TotalTime;
-    public bool UpdateActive = false;
-    private bool TimerFinished = false;
+
+    private bool TimerUpdateFlag=false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,60 +21,36 @@ public class SliderControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!UpdateActive){return;}
-
-        TimerValueCheck();
-        SubtractionTimer();
     }
 
-    public void TimerActive()
+    public void SetTimerUpdateFlag(bool flag)
     {
-        UpdateActive = true;
+        TimerUpdateFlag = flag;
     }
 
-    // タイマーの終了フラグ取得
-    public bool GetTimerFinished()
+    public bool GetTimerUpdateFlag()
     {
-        return TimerFinished;
-    }
-
-    // タイマー設定の初期化
-    public void InitializationTimer()
-    {
-        SliderObject.value = SliderObject.maxValue;
-        UpdateActive = false;
-        TimerFinished = false;
-    }
-
-    public void ChangeValue()
-    {
-        SliderObject.value = SliderObject.maxValue;
+        return TimerUpdateFlag;
     }
 
     // タイマーの数値チェック
-    private void TimerValueCheck()
+    public bool TimerFinished()
     {
         // 0以上
-        if(SliderObject.value > 0){return;}
+        if(SliderObject.value > 0){return false;}
 
         // 0以下
         SliderObject.value = 0;
-        UpdateActive = false;
-        TimerFinished = true;
+        TimerUpdateFlag = true;
+
+        return true;
     }
 
     // タイマーの減算処理
-    private void SubtractionTimer()
+    public void SubtractionTimer()
     {
         TotalTime -= Time.deltaTime;
 
         SliderObject.value = SliderObject.maxValue + TotalTime;
-
-        /* 0以下の処理
-        if(SliderObject.value <= 0)
-        {
-            //this.transform.SetAsFirstSibling();
-            //localScaleChange(1.0f);
-        }*/
     }
 }

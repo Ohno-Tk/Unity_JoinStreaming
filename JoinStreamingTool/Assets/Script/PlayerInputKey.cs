@@ -18,7 +18,7 @@ public class PlayerInputKey : MonoBehaviour
         if (Input.GetKey (StartSectionKey))
         {
             Debug.Log("募集を開始します");
-            //StartSection.GetComponent<Observer>().StartTimer();
+            StartSection.GetComponent<Observer>().SetUpdateFlag(true);
         }
         else if(Input.GetKey (SettingKey))
         {
